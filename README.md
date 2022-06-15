@@ -1,2 +1,1 @@
-# python-workout
-Source code from "Python Workout"
+# Source code from "Python Workout"
