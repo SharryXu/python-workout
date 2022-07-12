@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-def sum(l = None, *args):
+
+def sum(l=None, *args):
     amount = 0
     if type(l) is list:
         for item in l:
@@ -13,7 +14,7 @@ def sum(l = None, *args):
     elif args is not None:
         if len(args) > 1:
             for item in args:
-                if type(item) is int: 
+                if type(item) is int:
                     amount += item
                 elif type(item) is list:
                     for item_level_2 in item:
@@ -26,14 +27,3 @@ def sum(l = None, *args):
                     amount += item
 
     return amount
-
-if __name__ == "__main__":
-    print(sum([1, 2, 3]))
-    print(sum(1, 2, 3))
-    print(sum(*[1, 2, 3]))
-    print(sum([1, 2, 3], 4))
-    print(sum([1, 2, 3], 4, 5))
-    print(sum(4, [1, 2, 3]))
-    print(sum(4, 5, [1, 2, 3]))
-
-
