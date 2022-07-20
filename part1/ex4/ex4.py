@@ -1,8 +1,5 @@
-def hex_output(a):
-    raw = str(a)
+def hex_output(hex_num: str):
     result = 0
-    index = 0
-    for c in raw[-1 : -len(raw) - 1 : -1]:
-        result += int(c) * pow(16, index)
-        index += 1
+    for index, value in enumerate(reversed(hex_num)):
+        result += int(value, 16) * pow(16, index)
     return result
